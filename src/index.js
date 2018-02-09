@@ -1,12 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
+import { getShoppingListItems } from './actions/shoppingListItemActions';
 import App from './App';
 import './index.css';
 
+const store = configureStore();
+//make the store of items immediately available
+store.dispatch(getShoppingListItems());
+
 ReactDOM.render(
-   <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
-
-
