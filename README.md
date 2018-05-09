@@ -33,7 +33,7 @@ Notice that we are importing the `createStore` function from Redux. We write our
 
 We'll do this in our `index.js` file, the entry point of our application.
 
-
+ 
 #### Using the Redux Store
 
 We'll initialize our store in `index.js` and from here we'll make it available to our component tree. Note that right now, we only have one component, `App.js`, but this will change later when we create some child components that `App` will contain.
